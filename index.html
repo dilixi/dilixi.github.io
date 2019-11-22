@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>地粒希，农家自榨菜籽油</title>
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://dilixi.gitee.io/resource/css/style.css" rel='stylesheet' type='text/css' />
+	<link href="https://dilixi.gitee.io/resource/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="https://dilixi.gitee.io/resource/css/animate.css" rel='stylesheet' type='text/css' />
+
+	<script src="https://dilixi.gitee.io/resource/js/jquery.min.js"> </script>
+</head>
+<body>
+<!-- Header START
+============================================= -->
+<div class="header">
+	<div class = "logo" onclick="window.open('index.html','_self')">
+		<span class="logo-picture"></span>
+		<span class="logo-text"></span>	
+	</div>
+	<span class="header-tel-number" onclick="window.open('tel:17373365528','_self')">
+		<p>17373365528</p>
+	</span> 
+</div>
+<!-- Header END
+============================================= -->
+
+<!-- wrapper START
+============================================= -->
+<div class="wrapper">
+	<div class="nav-box">
+		<div class="btn trigger">
+			<span class="line"></span>
+		</div>
+		<div class="icons">
+			<div class="rotater active">
+				<div class="btn btn-icon main" pageId="#main"><p>主页</p></div>
+			</div>
+			<div class="rotater">
+				<div class="btn btn-icon articles" pageId="#articles"><p>动态</p></div>
+			</div>
+			<div class="rotater">
+				<div class="btn btn-icon about" pageId="#about"><p>关于</p></div>
+			</div>
+		</div>
+	</div>
+
+<!-- tabber START
+============================================= -->
+	<div class = "tabber"> 
+<!-- main START
+============================================= -->
+		<div id="main" class="tabber-item">
+<!-- container START
+============================================= -->
+			<div class="container" style="text-align: left;">
+<!-- slider script START
+============================================= -->
+			<script src="https://dilixi.gitee.io/resource/js/responsiveslides.min.js"></script>
+			<script>
+				$(function () 
+				{
+					$("#slider4").responsiveSlides
+					({
+						auto: true,
+						pager: true,
+						nav: false,
+						speed: 500,
+						namespace: "callbacks",
+						before: function () 
+						{
+							$('.events').append("<li>before event fired.</li>");
+						},
+						after: function () 
+						{
+							$('.events').append("<li>after event fired.</li>");
+						}
+					});
+				});
+			</script>
+<!-- slider script END
+============================================= -->
+				<ul class="rslides" id="slider4">
+					<li>
+						<img src="https://dilixi.gitee.io/resource/images/press.jpg" alt="">
+						<div class="caption" data-wow-delay="0.4s">
+							<div class="slide-text-info">
+								<p>新鲜现榨，纯正菜籽油</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<img src="https://dilixi.gitee.io/resource/images/sellout.jpg" alt="">
+						<div class="caption">
+							<div class="slide-text-info bounceInDown" data-wow-delay="0.4s">
+								<p>每次榨油的菜饼大概有1200斤左右，装车运回仓库</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<img src="https://dilixi.gitee.io/resource/images/sunCure.jpg" alt="">
+						<div class="caption">
+							<div class="slide-text-info bounceInDown" data-wow-delay="0.4s">
+								<p>油菜籽经过晾晒以及烘干，油菜籽无霉变更放心</p>
+							</div>
+						</div>
+					</li>
+				</ul>    
+				<div class="title width-long">
+					<h2>为什么选择我们</h2>
+				</div>
+				<video style = "width:50%; height:5%;" controls poster="https://dilixi.gitee.io/resource/images/video-poster.jpg">
+					<source src="https://dilixi.gitee.io/resource/images/final.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<br>
+				<span><label>01</label></span>
+				<h4>承诺</h4>
+				<p>每一滴菜籽油都是纯正的，从来不少称不掺假。</p>
+				<span><label>02</label></span>
+				<h4>油菜籽</h4>
+				<p>油菜籽产自湖北，颗粒小，出油率低，成本较高，属于非转基因油菜籽。 </p>
+				<span><label>03</label></span>
+				<h4>产量</h4>
+				<p>每两天一次的新鲜现榨，<mark>日均200斤左右</mark>菜籽油，单次采购较大的需提前电话预约。</p>
+			</div>  
+<!-- container END
+============================================= -->
+			<div id="js_pc_qr_code" class="qr_code_pc_outer" style="display:none;">
+				<img src="https://dilixi.gitee.io/resource/images/wechatQR.jpg"style= "width:64px; height:64px;">
+				<p>微信扫一扫<br>关注该公众号</p>
+			</div>
+		</div>
+<!-- main END
+============================================= -->
+<!-- articles START
+============================================= -->
+		<div id="articles" class="tabber-item">
+<!-- container START
+============================================= -->
+			<div class="container" >		
+				<div class="article-list">
+					<div class="title width-short">
+						<h2>动态</h2>
+					</div>
+				</div>
+				<div class="article">
+					<div class="article-nav title width-short" onclick="gotoArticleList()">
+						<h2>返回</h2>
+					</div>
+					<div class="content"></div>
+				</div>
+				<div id="js_pc_qr_code" class="qr_code_pc_outer">
+					<img src="https://dilixi.gitee.io/resource/images/wechatQR.jpg"style= "width:64px; height:64px;">
+					<p>微信扫一扫<br>关注该公众号</p>
+				</div> 
+			</div>
+<!-- container END
+============================================= -->
+		</div>
+<!-- articles END
+============================================= -->
+<!--  START
+============================================= -->
+		<div id="about" class="tabber-item">
+<!-- container START
+============================================= -->
+			<div class="container">
+				<div class="title width-normal"><h2>关于我们</h2></div>
+				<ul>
+					<li>
+						<div class="about-us">
+							<div class="left makert"></div>
+							<div class="right">
+								<div class="data-list vertical">
+									<ul>
+										<li>
+											<div class="item">
+												<h3>皇图岭大市场</h3>
+												<p>皇图岭镇是攸县的北大门，与醴陵市接壤，东与江西省萍乡市毗邻，106国道、平汝高速公路和醴茶铁路纵贯全境，素有“一脚踏两省，鸡鸣闻三县”之说，交通区位优势十分明显，是湘东地区建镇较早、辐射面积较广、影响较大的经济重镇。皇图岭镇辖25个村、2个居委会、50213人（2017年），1.9万多户；有耕地5.9万亩，林地19.2万亩，其中人口和面积分别占全县的十分之一。2006年，皇图岭镇工农业总产值18.77亿元，财政收入1069万元。全镇有中小学26所，其中中学3所、中心完小3所、小学20所，教职工508人 。市坪中学教学设施较为完善，2006年初中毕业会考中，攸县一中择优录取22人，居全县农村中学之首。有县级医院1所（攸县第三人民医院），有乡卫生院两所（高枧卫生院、市上坪卫生院），乡村医疗点31个。
+												</p>
+											</div>
+										</li>
+									</ul>	
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="about-us">
+							<div class="left shop"></div>
+							<div class="right">
+								<div class="data-list vertical">
+									<ul>
+										<li>
+											<div class="item">
+												<h3>好菜油原味香榨油坊</h3>
+												<p>于1998年成立，皇图岭大市场唯一的一家二十年榨油老作坊。</p>                                    
+											</div>
+										</li>
+										<li>
+											<div class="item">
+												<h3>经营范围</h3>
+												<p>农家菜籽油、芝麻油、茶油现榨现卖。</p>
+											</div>
+										</li>
+										<li>
+											<div class="item">
+												<h3>导航</h3>
+												<p>百度地图或者高德地图搜索"好菜油原味香"。</p>
+											</div>
+										</li>
+									</ul>	
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="title width-normal"><h2>联系我们</h2></div>
+				<div class="data-list horizontal">
+					<ul>
+						<li>
+							<div class="item wow fadeInUp" data-wow-delay="0.3s">
+								<img src="https://dilixi.gitee.io/resource/images/location.png">地址</br>
+								<p>中国株洲市攸县皇图岭镇,皇图岭大市场内樱花家纺旁</p>
+							</div>
+						</li>
+						<li>
+							<div class="item wow fadeInUp" data-wow-delay="0.5s">
+								<img src="https://dilixi.gitee.io/resource/images/call.png">电话</br>
+								<p>陈先生:17373365528</p>                                    
+							</div>
+						</li>
+						<li>
+							<div class="item wow fadeInUp" data-wow-delay="0.8s">
+								<img src="https://dilixi.gitee.io/resource/images/wechat.png">微信</br> 
+								<p>nopray3693</p> 
+								<div class="qrcode"></div>                           
+							</div>
+						</li>                   
+					</ul>	
+				</div>
+				<div id="js_pc_qr_code" class="qr_code_pc_outer" style="display:none;">
+					<img src="https://dilixi.gitee.io/resource/images/wechatQR.jpg"style= "width:64px; height:64px;">
+					<p>微信扫一扫<br>关注该公众号</p>
+				</div>
+			</div>
+<!-- container END
+============================================= -->
+		</div>
+<!-- about END
+============================================= -->
+	</div>
+<!-- tabber END
+============================================= -->
+</div> <!-- wrapper -->
+<!-- wrapper END
+============================================= -->
+<!-- footer START
+============================================= -->
+	<div class="footer">
+		<div class="container">
+    		<p>好菜油原味香榨油坊.Copyright&copy;1998-2019.</p>
+		</div>
+	</div>
+<!-- footer END
+============================================= -->
+<script type="text/javascript">
+
+	$(window).scroll(function()
+	{
+		if($(document).scrollTop()!=0)
+		{
+			var $tabble =$(".tabber-item.active");
+			var getId = $tabble.attr("id");
+
+			//console.log("getId = "+getId);
+			//console.log("$(window).scrollTop() = "+$(window).scrollTop());
+			//保存上一次浏览位置
+			
+			if(getId == 'articles')
+            {
+                if($(".article").is(":visible"))
+                {
+                	//如果打开了文章就不保存位置了
+                	//console.log("no need to save return");
+                	return;
+                }
+            }
+
+			localStorage.setItem(getId,$(window).scrollTop());
+		}
+	});
+
+	function gotoArticleList()
+	{
+		$(".article").hide();
+		$(".article-list").show();
+		$(document).scrollTop(localStorage.getItem('articles'));
+	}
+
+	function getContent(content,id)
+	{
+		$.get(content,function(html,status)
+		{
+		    try 
+		    {
+			    if ("success" != status) 
+			    {
+			        throw new Error('终止程序并退出');
+			    }
+			    else
+			    {
+		            
+			    	$(".article .content").html(html);
+			    	$(".article-list").hide();
+			    	$(".article").show();
+			    	$(document).scrollTop(0); 
+			    }
+			} 
+			catch (e) 
+			{
+			    console.log(e.message);
+			}
+		}).fail(function () 
+		   {
+		       $(".article .content").html("抱歉,菜油君找不到这篇文章了");
+		   });
+	}
+
+	function initMainPage()
+	{
+		var mainPage = $($(".rotater.active").find('div').attr("pageId"));
+		mainPage.show();
+		mainPage.addClass("active");
+	}
+
+	function sortDown(x,y)
+	{
+		return y.date.replace(/\//,"").replace(/\//,"") -x.date.replace(/\//,"").replace(/\//,"");
+	}
+
+	$(document).ready(function() 
+	{
+		initMainPage();
+
+		var wow = new WOW();
+
+        wow.init();
+
+		$().UItoTop({ easingType: 'easeOutQuart' });
+
+		$.getJSON("post/config.json",function(data,status,xhr)
+		{
+			if('success' != status)
+		    {
+		    	alert('get fail');
+		    	return;
+		    }
+
+			var newdata= data.articles;
+
+			newdata.sort(sortDown);
+		    //console.log(JSON.stringify(newdata));
+
+		    var article = newdata;
+
+		    for(var i = 0; i<article.length; i++)
+		    {
+		        var div = document.createElement('div');
+		        div.setAttribute('class', 'item');
+
+		        var previewDiv = document.createElement("div");   
+		        previewDiv.setAttribute('class', 'preview');
+
+				var title = document.createElement('p');            
+		        title.setAttribute('class', 'title');
+		        title.innerText = article[i].title;  
+
+				var date = document.createElement('p');            
+		        date.setAttribute('class', 'date');
+		        date.innerText = article[i].date; 
+
+		        var link = article[i].link;
+		        var setId = article[i].date;
+		        var setLink = 'getContent('+'"'+link+'",'+'"'+setId+'"'+')';
+		        div.setAttribute('id',setId);
+		        div.setAttribute('onclick',setLink);
+
+		        //div.appendChild(previewDiv); 
+		        div.appendChild(title); 
+		        div.appendChild(date);
+
+				$(".article-list").append(div); //获取body对象.
+		    }
+					
+		});  
+
+		$(".nav-box .rotater").click(function() 
+		{
+			//加入保nav-box位置
+			$(this).addClass("active").siblings('.rotater.active').removeClass("active");
+
+			$(jQuery(this).find('div').attr("pageId")).show().siblings('.tabber-item').hide();
+
+			$(jQuery(this).find('div').attr("pageId")).addClass('active').siblings('.tabber-item.active').removeClass("active");
+
+			var getId = ($(jQuery(this).find('div').attr("pageId")).attr("id"));
+
+		    var setScroll = localStorage.getItem(getId);
+
+			$(document).scrollTop(setScroll); 
+
+			wow.init();
+		});
+
+		var $navObjs = $(".nav-box");
+		var nav=$navObjs[0];
+
+		var $triggerObjs = $(".trigger");
+		var trigger=$triggerObjs[0];
+
+		var hasMove = false;
+		var flag = false;
+
+		var cur = 
+		{
+		    x:0,
+		    y:0
+		}
+
+		function navTouchStartHandle()
+		{
+		    flag = true;
+		    var touch = event.touches[0];
+		    nav.startX = touch.clientX - nav.offsetLeft;  
+		    nav.startY = touch.clientY - nav.offsetTop;  
+		    hasMove = false;
+		}
+
+		function navTouchMoveHandle()
+		{
+		    if(flag)
+		    {
+		        var touch = event.touches[0];
+		        nav.style.left = touch.clientX - nav.startX + "px";  
+		        nav.style.top = touch.clientY - nav.startY + "px";  
+		        var maxWidth = $(window).width() - 128;
+		        var maxHeight = $(window).height() - 128;
+
+		        if (touch.clientX - nav.startX <= 0) 
+		        {  
+		            nav.style.left = 0 + "px";  
+		        }  
+		        if (touch.clientY - nav.startY <= 0) 
+		        {  
+		            nav.style.top = 0 + "px";  
+		        }  
+		        if (touch.clientX - nav.startX >= maxWidth) 
+		        {  
+		            nav.style.left = maxWidth + "px";  
+		        }  
+		        if (touch.clientY - nav.startY >= maxHeight) 
+		        {  
+		            nav.style.top = maxHeight + "px";  
+		        } 
+
+		        hasMove = true;
+		    }
+		}
+
+		function navTouchEndHandle()
+		{
+		    flag = false;
+
+		    if(hasMove != true)
+		    {
+		    	$(".nav-box").toggleClass("active");
+		    }
+		}
+
+		var is_mobi = navigator.userAgent.toLowerCase().match(/(ipod|ipad|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince)/i) != null;
+
+		if (is_mobi) 
+		{
+			trigger.addEventListener("touchstart",function()
+			{
+			    navTouchStartHandle();
+			},false)
+
+			trigger.addEventListener("touchmove",function()
+			{
+			    navTouchMoveHandle();
+			},false)
+
+			trigger.addEventListener("touchend",function()
+			{
+			    navTouchEndHandle();
+			},false);
+		}
+		else
+		{
+			trigger.addEventListener("mousedown",function()
+			{
+				navMouseHandle();
+			},false);
+		}
+
+		var preLeft = 0;
+
+		function navMouseHandle(e) 
+		{  
+		    var e = e || window.event;  
+
+		    nav.startX = e.clientX - nav.offsetLeft;  
+		    nav.startY = e.clientY - nav.offsetTop;  
+
+		    document.onmousemove = function(e) 
+		    {  
+		        var e = e || window.event;  
+
+		        nav.style.left = e.clientX - nav.startX + "px";  
+		        nav.style.top = e.clientY - nav.startY + "px";  
+
+		        var maxWidth = $(window).width() - 128;
+		        var maxHeight = $(window).height() - 128;
+
+		        if (e.clientX - nav.startX <= 0) 
+		        {  
+		            nav.style.left = 0 + "px";  
+		        }  
+		        if (e.clientY - nav.startY <= 0) 
+		        {  
+		            nav.style.top = 0 + "px";  
+		        }  
+		        if (e.clientX - nav.startX >= maxWidth) 
+		        {  
+		            nav.style.left = maxWidth + "px";  
+		        }  
+		        if (e.clientY - nav.startY >= maxHeight) 
+		        {  
+		            nav.style.top = maxHeight + "px";  
+		        } 
+
+		        preLeft = 1;
+		    };  
+		  
+		    document.onmouseup = function() 
+		    {  
+		        document.onmousemove = null;  
+		        document.onmouseup = null;  
+
+		        if(preLeft != nav.offsetLeft)
+		        {
+		        	if(preLeft == 0)
+		        	{
+		        		$(".nav-box").toggleClass("active");
+		        	}
+
+		        	preLeft = nav.offsetLeft;
+		        }
+		        else
+		        {
+		        	$(".nav-box").toggleClass("active");
+		        }
+		    };  
+		}                      
+	});
+</script>
+<script type="text/javascript" src="https://dilixi.gitee.io/resource/js/wow.js"></script>
+<script type="text/javascript" src="https://dilixi.gitee.io/resource/js/move-top.js"></script>
+<script type="text/javascript" src="https://dilixi.gitee.io/resource/js/easing.js"></script>
+<script src="https://dilixi.gitee.io/resource/js/jquery-weui.js"></script>
+<div class="clearfix"></div>
+</body>
+</html>
