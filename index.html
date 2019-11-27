@@ -2,32 +2,32 @@
 <html>
 <head>
 	<title>地粒希，农家自榨菜籽油</title>
-	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href="https://dilixi.gitee.io/resource/css/style.css" rel='stylesheet' type='text/css' />
-	<link href="https://dilixi.gitee.io/resource/css/bootstrap.css" rel='stylesheet' type='text/css' />
-	<link href="https://dilixi.gitee.io/resource/css/animate.css" rel='stylesheet' type='text/css' />
-
-	<script src="https://dilixi.gitee.io/resource/js/jquery.min.js"> </script>
+	<link href="https://dilixi.gitee.io/resource/css/style.css" rel='stylesheet' type='text/css'/>
+<!--
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+-->
+	<link href="https://dilixi.gitee.io/resource/css/bootstrap.css" rel='stylesheet' type='text/css'/>
+	<link href="https://dilixi.gitee.io/resource/css/animate.css" rel='stylesheet' type='text/css'/>
 </head>
 <body>
 <!-- Header START
 ============================================= -->
 <div class="header">
 	<div class = "logo" onclick="window.open('index.html','_self')">
-		<span class="logo-picture"></span>
-		<span class="logo-text"></span>	
+		<span class="logo-picture icon-logopicture"></span>
+		<span class="logo-text icon-logotext"></span>	
 	</div>
-	<span class="header-tel-number" onclick="window.open('tel:17373365528','_self')">
+	<span class="header-tel-number icon-telnumber" onclick="window.open('tel:17373365528','_self')">
 		<p>17373365528</p>
 	</span> 
 </div>
 <!-- Header END
 ============================================= -->
-
 <!-- wrapper START
 ============================================= -->
 <div class="wrapper">
@@ -53,92 +53,325 @@
 	<div class = "tabber"> 
 <!-- main START
 ============================================= -->
-		<div id="main" class="tabber-item">
+		<div id="main" class="page-item">
 <!-- container START
 ============================================= -->
-			<div class="container" style="text-align: left;">
-<!-- slider script START
-============================================= -->
-			<script src="https://dilixi.gitee.io/resource/js/responsiveslides.min.js"></script>
-			<script>
-				$(function () 
-				{
-					$("#slider4").responsiveSlides
-					({
-						auto: true,
-						pager: true,
-						nav: false,
-						speed: 500,
-						namespace: "callbacks",
-						before: function () 
-						{
-							$('.events').append("<li>before event fired.</li>");
-						},
-						after: function () 
-						{
-							$('.events').append("<li>after event fired.</li>");
-						}
-					});
-				});
-			</script>
-<!-- slider script END
-============================================= -->
-				<ul class="rslides" id="slider4">
-					<li>
-						<img src="https://dilixi.gitee.io/resource/images/press.jpg" alt="">
-						<div class="caption" data-wow-delay="0.4s">
-							<div class="slide-text-info">
-								<p>新鲜现榨，纯正菜籽油</p>
+			<div class="container">
+				<div class = "rslides-wrapper wow fadeIn">
+					<ul class="rslides" id="slider4">
+						<li>
+							<video controls poster="video-poster.jpg">
+								<source src = "https://dilixi.gitee.io/resource/images/final.mp4" type="video/mp4">Your browser does not support the video tag.
+							</video>
+						</li>
+						<li>
+							<img src="press.jpg">
+							<div class="caption">
+								<div class="slide-text-info">
+									<p>新鲜现榨，纯正菜籽油</p>
+								</div>
 							</div>
-						</div>
-					</li>
-					<li>
-						<img src="https://dilixi.gitee.io/resource/images/sellout.jpg" alt="">
-						<div class="caption">
-							<div class="slide-text-info bounceInDown" data-wow-delay="0.4s">
-								<p>每次榨油的菜饼大概有1200斤左右，装车运回仓库</p>
+						</li>
+						<li>
+							<img src="sellout.jpg">
+							<div class="caption">
+								<div class="slide-text-info">
+									<p>每次榨油的菜饼大概有1200斤左右，装车运回仓库</p>
+								</div>
 							</div>
-						</div>
-					</li>
-					<li>
-						<img src="https://dilixi.gitee.io/resource/images/sunCure.jpg" alt="">
-						<div class="caption">
-							<div class="slide-text-info bounceInDown" data-wow-delay="0.4s">
-								<p>油菜籽经过晾晒以及烘干，油菜籽无霉变更放心</p>
+						</li>
+						<li>
+							<img src="sunCure.jpg">
+							<div class="caption">
+								<div class="slide-btns"><a class="viewMore" href="#craft">查看更多</a></div>
+								<div class="slide-text-info">
+									<p>油菜籽经过晾晒以及烘干，油菜籽无霉变更放心</p>
+								</div>
 							</div>
-						</div>
-					</li>
-				</ul>    
-				<div class="title width-long">
-					<h2>为什么选择我们</h2>
+						</li>
+					</ul>
+					<ul id="slider-pager">
+						<li>
+							<a href="#">
+							    <img src="video-poster.jpg">
+								<img class= "playIcon" src="play.png">
+							</a>
+						</li>
+						<li><a href="#"><img src="press.jpg"></a></li>
+						<li><a href="#"><img src="sellout.jpg"></a></li>
+						<li><a href="#"><img src="sunCure.jpg"></a></li>
+					</ul> 
 				</div>
-				<video style = "width:50%; height:5%;" controls poster="https://dilixi.gitee.io/resource/images/video-poster.jpg">
-					<source src="https://dilixi.gitee.io/resource/images/final.mp4" type="video/mp4">
-					Your browser does not support the video tag.
-				</video>
-				<br>
-				<span><label>01</label></span>
-				<h4>承诺</h4>
-				<p>每一滴菜籽油都是纯正的，从来不少称不掺假。</p>
-				<span><label>02</label></span>
-				<h4>油菜籽</h4>
-				<p>油菜籽产自湖北，颗粒小，出油率低，成本较高，属于非转基因油菜籽。 </p>
-				<span><label>03</label></span>
-				<h4>产量</h4>
-				<p>每两天一次的新鲜现榨，<mark>日均200斤左右</mark>菜籽油，单次采购较大的需提前电话预约。</p>
+                <div class="section-title text-center wow fadeIn">
+                    <h2>问答</h2>
+                </div>
+				<div class="product-info question">
+					<div class="data-list vertical">
+						<ul>
+							<li>
+								<div class="item wow fadeInUp">
+									<h3>问</h3>
+									<p>为什么炒菜时有油烟?</p>
+									<h3>答</h3>
+									<p>物理压榨工艺,与化学工艺处理过的相比会有一些油烟,建议静置几天后再食用。</p>
+								</div>
+							</li>
+							<li>
+								<div class="item wow fadeInUp">
+									<h3>问</h3>
+									<p>为什么炒菜时有泡沫？</p>
+									<h3>答</h3>
+									<p>因为菜籽油自身特性，在烹饪加热时会产生泡沫,炒菜时最好等到油冒烟没有泡沫了再下料,这样炒出来的菜更好吃。</p>
+								</div>
+							</li>
+							<li>
+								<div class="item wow fadeInUp">
+									<h3>问</h3>
+									<p>为什么颜色比超市买的油深一些?</p>
+									<h3>答</h3>
+									<p>油菜籽本身是黑色的,而超市大多数都是精炼油,经过脱色化学工艺处理,所以颜色较淡，本店菜籽油是物理压榨，是初榨毛油经滤机过滤后得到的,颜色偏深但味道更纯,更香一些。</p>
+								</div>
+							</li>
+							<li>
+								<div class="item wow fadeInUp">
+									<h3>问</h3>
+									<p>买回来觉得不纯,不想要了怎么办?</p>
+									<h3>答</h3>
+									<p>退货退款,来回车费我们承担。</p>
+								</div>
+							</li>
+						</ul>	
+					</div>
+				</div>
+                <div class="section-title text-center wow fadeIn">
+                    <h2>产品参数</h2>
+                </div>
+				<div class="product-info">
+					<div class="left icon-bottle wow fadeInLeftBig"></div>
+					<div class="right wow fadeInRightBig">
+					<div class="data-list vertical">
+						<ul>
+							<li>
+								<div class="item">
+									<h3>规格</h3>
+									<p>容量:5L;重量:去皮后9斤3两。</p>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<h3>品种</h3>
+									<p>非转基因。</p>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<h3>生产工艺</h3>
+									<p>物理压榨。</p>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<h3>产地</h3>
+									<p>中国株洲攸县。</p>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<h3>保质期</h3>
+									<p>12个月。</p>
+								</div>
+							</li>
+						</ul>	
+					</div>
+					</div>
+				</div>
+<!-- FEATURES START
+============================================= -->
+                <div class="features-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="section-title text-center wow fadeIn">
+                                <h2>为什么选择我们</h2>
+                            </div>
+                            <div class="features-wrap row">
+                                <div class="col-md-4">
+                                    <div class="features-item wow fadeInUp">
+                                        <div class="icon icon-nopill"></div>
+                                        <div class="text">
+                                            <h4>无添加剂</h4>
+                                            <p>无食品添加剂，纯绿色无污染，吃起来更健康更放心。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="features-item wow fadeInUp" data-wow-delay="0.3">
+                                        <div class="icon icon-nomix"></div>
+                                        <div class="text">
+                                            <h4>99.99...%纯正</h4>
+                                            <p>纯菜籽油,非调和油,没有按比例将多种食用油进行混合。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="features-item wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="icon icon-notransgenosis"></div>
+                                        <div class="text">
+                                            <h4>非转基因</h4>
+                                            <p>油菜籽产自湖北，颗粒小，出油率低于进口油菜籽(转基因)。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="features-item wow fadeInUp" data-wow-delay="0.8s">
+                                        <div class="icon icon-goodsmell"></div>
+                                        <div class="text">
+                                            <h4>香味浓郁</h4>
+                                            <p>有菜籽油特有的香味，香气浓郁，无霉变气味，无异味。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="features-item wow fadeInUp" data-wow-delay="1.1s">
+                                        <div class="icon icon-press"></div>
+                                        <div class="text">
+                                            <h4>物理压榨</h4>
+                                            <p>不经过脱臭、脱色、脱脂等化学工艺,无化学残留物。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="features-item wow fadeInUp" data-wow-delay="1.3s">
+                                        <div class="icon icon-fresh"></div>
+                                        <div class="text">
+                                            <h4>新鲜现榨</h4>
+                                            <p>48小时内新鲜现榨，可以到现场现接。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="craft" class="section-title text-center wow fadeIn">
+                    <h2>榨油工艺</h2>
+                </div>
+                <div class="craft-info">
+                    <div class = "craft-item wow fadeInUp">
+                        <div  class="craft-iconBox"><img class="icon-dry1"></div>
+                        <div class= "text">
+                            <h4>人工晾晒</h4>
+                            <p>难得遇到一个大晴天,利用大太阳将油菜籽晾干,降低含水率。</p>
+                        </div>
+                    </div>
+                    <div class = "craft-item wow fadeInUp">
+                        <div  class="craft-iconBox"><img class="icon-dry2"></div>
+                        <div class= "text">
+                            <h4>油菜籽晾晒中</h4>
+                            <p>干干净净的油菜籽。</p>
+                        </div>
+                    </div>
+                    <div class = "craft-item wow fadeInUp">
+                        <div  class="craft-iconBox"><img class="icon-dry3"></div>
+                        <div class= "text">
+                            <h4>机器收籽</h4>
+                            <p>利用机器将晾晒好的油菜籽装袋,有效地去除大部分灰尘。</p>
+                        </div>
+                    </div>
+                    <div class = "craft-item wow fadeInUp">
+                        <div  class="craft-iconBox"><img class="icon-unpack1"></div>
+                        <div class= "text">
+                            <h4>拆包</h4>
+                            <p>将晾晒好的油菜籽拆包。</p>
+                        </div>
+                    </div> 
+                    <div class = "craft-item wow fadeInUp">
+                        <div  class="craft-iconBox"><img class="icon-unpack2"></div>
+                        <div class= "text">
+                            <h4>倒入上料机</h4>
+                            <p>将晾晒好的油菜籽装到上料机等待上料。</p>
+                        </div>
+                    </div> 
+                    <div class = "craft-item wow fadeInUp">
+                        <div  class="craft-iconBox"><img class="icon-rising"></div>
+                        <div class= "text">
+                            <h4>上料</h4>
+                            <p>油菜籽经机器自动传送到烘干机。</p>
+                        </div>
+                    </div> 
+                    <div class = "craft-item wow fadeInUp">
+                        <div  class="craft-iconBox"><img class="icon-stoving"></div>
+                        <div class= "text">
+                            <h4>烘干</h4>
+                            <p>采用滚动式容器,这样可以避免火源直接碳化油菜籽，将水分烘干到合适的程度,一次性可烘干1200斤左右。</p>
+                        </div>
+                    </div> 
+                    <div class = "craft-item wow fadeInUp">
+                        <div  class="craft-iconBox"><img class="icon-cooldown"></div>
+                        <div class= "text">
+                            <h4>出锅冷却</h4>
+                            <p>出锅后放置几个小时,冷却到合适的温度和湿度，只有这样榨出来的油才能达到最佳的颜色和香味。</p>
+                        </div>
+                    </div> 
+                    <div class = "craft-item wow fadeInUp">
+                        <div  class="craft-iconBox"><img class="icon-pressing1"></div>
+                        <div class= "text">
+                            <h4>入槽压榨</h4>
+                            <p>通过物理挤压将菜油从油菜籽中挤出来。</p>
+                        </div>
+                    </div> 
+                    <div class = "craft-item wow fadeInUp">
+                        <div  class="craft-iconBox"><img class="icon-pressing2"></div>
+                        <div class= "text">
+                            <h4>毛油</h4>
+                            <p>从机器滴落下来,产生气泡是正常现象。</p>
+                        </div>
+                    </div>
+                    <div class = "craft-item wow fadeInUp">
+                        <div  class="craft-iconBox"><img class="icon-preheat"></div>
+                        <div class= "text">
+                            <h4>毛油预热</h4>
+                            <p>毛油里面有部分杂质，需要过滤后才能直接食用，适当预热有助于过滤。</p>
+                        </div>
+                    </div> 
+                    <div class = "craft-item wow fadeInUp">
+                        <div  class="craft-iconBox"><img class="icon-filter"></div>
+                        <div class= "text">
+                            <h4>过滤</h4>
+                            <p>过滤机器可以将有害物质过滤掉。</p>
+                        </div>
+                    </div> 
+                    <div class = "craft-item wow fadeInUp">
+                        <div  class="craft-iconBox"><img class="icon-realpicture"></div>
+                        <div class= "text">
+                            <h4>接油</h4>
+                            <p>将干净清澈的成品油引入装油的容器中。</p>
+                        </div>
+                    </div> 
+                    <div class = "craft-item wow fadeInUp">
+                        <div  class="craft-iconBox"><img class="icon-subside"></div>
+                        <div class= "text">
+                            <h4>静置沉淀</h4>
+                            <p>将成品油倒入油桶中,静置几天后再食用效果更佳。</p>
+                        </div>
+                    </div> 
+                    <div class = "craft-item wow fadeInUp">
+                        <div  class="craft-iconBox"><img class="icon-endproduct"></div>
+                        <div class= "text">
+                            <h4>成品油</h4>
+                            <p>手机实拍原图。</p>
+                        </div>
+                    </div> 
+                </div>
+                <!-- FEATURES END -->
 			</div>  
 <!-- container END
 ============================================= -->
-			<div id="js_pc_qr_code" class="qr_code_pc_outer" style="display:none;">
-				<img src="https://dilixi.gitee.io/resource/images/wechatQR.jpg"style= "width:64px; height:64px;">
-				<p>微信扫一扫<br>关注该公众号</p>
-			</div>
 		</div>
 <!-- main END
 ============================================= -->
 <!-- articles START
 ============================================= -->
-		<div id="articles" class="tabber-item">
+		<div id="articles" class="page-item">
 <!-- container START
 ============================================= -->
 			<div class="container" >		
@@ -153,10 +386,6 @@
 					</div>
 					<div class="content"></div>
 				</div>
-				<div id="js_pc_qr_code" class="qr_code_pc_outer">
-					<img src="https://dilixi.gitee.io/resource/images/wechatQR.jpg"style= "width:64px; height:64px;">
-					<p>微信扫一扫<br>关注该公众号</p>
-				</div> 
 			</div>
 <!-- container END
 ============================================= -->
@@ -165,7 +394,7 @@
 ============================================= -->
 <!--  START
 ============================================= -->
-		<div id="about" class="tabber-item">
+		<div id="about" class="page-item">
 <!-- container START
 ============================================= -->
 			<div class="container">
@@ -173,14 +402,14 @@
 				<ul>
 					<li>
 						<div class="about-us">
-							<div class="left makert"></div>
+							<div class="left icon-market"></div>
 							<div class="right">
 								<div class="data-list vertical">
 									<ul>
 										<li>
 											<div class="item">
 												<h3>皇图岭大市场</h3>
-												<p>皇图岭镇是攸县的北大门，与醴陵市接壤，东与江西省萍乡市毗邻，106国道、平汝高速公路和醴茶铁路纵贯全境，素有“一脚踏两省，鸡鸣闻三县”之说，交通区位优势十分明显，是湘东地区建镇较早、辐射面积较广、影响较大的经济重镇。皇图岭镇辖25个村、2个居委会、50213人（2017年），1.9万多户；有耕地5.9万亩，林地19.2万亩，其中人口和面积分别占全县的十分之一。2006年，皇图岭镇工农业总产值18.77亿元，财政收入1069万元。全镇有中小学26所，其中中学3所、中心完小3所、小学20所，教职工508人 。市坪中学教学设施较为完善，2006年初中毕业会考中，攸县一中择优录取22人，居全县农村中学之首。有县级医院1所（攸县第三人民医院），有乡卫生院两所（高枧卫生院、市上坪卫生院），乡村医疗点31个。
+												<p>皇图岭农贸市场始建于清道光元年即1821年，至今已有180多年的历史。它位于湘赣两省四县市交汇中心，交通十分便利。经营商品近万种，其中，粮食、辣椒、生姜及牲畜等农产品享誉全国，有来自全国10多个省、20个县市近2000名客商在市场内经营。皇图岭农贸市场同时也是全国千家亿元大型农产品批发市场之一，历来是湖南省农贸市场“五雄”之一，多年来被评为省级和全国文明市场，是国务院农村调查研究室农产品价格调查联系网点。
 												</p>
 											</div>
 										</li>
@@ -191,7 +420,7 @@
 					</li>
 					<li>
 						<div class="about-us">
-							<div class="left shop"></div>
+							<div class="left icon-shop"></div>
 							<div class="right">
 								<div class="data-list vertical">
 									<ul>
@@ -224,28 +453,24 @@
 					<ul>
 						<li>
 							<div class="item wow fadeInUp" data-wow-delay="0.3s">
-								<img src="https://dilixi.gitee.io/resource/images/location.png">地址</br>
+								<img src="location.png">地址</br>
 								<p>中国株洲市攸县皇图岭镇,皇图岭大市场内樱花家纺旁</p>
 							</div>
 						</li>
 						<li>
 							<div class="item wow fadeInUp" data-wow-delay="0.5s">
-								<img src="https://dilixi.gitee.io/resource/images/call.png">电话</br>
+								<img src="call.png">电话</br>
 								<p>陈先生:17373365528</p>                                    
 							</div>
 						</li>
 						<li>
 							<div class="item wow fadeInUp" data-wow-delay="0.8s">
-								<img src="https://dilixi.gitee.io/resource/images/wechat.png">微信</br> 
+								<img src="wechat.png">微信</br> 
 								<p>nopray3693</p> 
-								<div class="qrcode"></div>                           
+								<img class="qrcode icon-chan">                           
 							</div>
 						</li>                   
 					</ul>	
-				</div>
-				<div id="js_pc_qr_code" class="qr_code_pc_outer" style="display:none;">
-					<img src="https://dilixi.gitee.io/resource/images/wechatQR.jpg"style= "width:64px; height:64px;">
-					<p>微信扫一扫<br>关注该公众号</p>
 				</div>
 			</div>
 <!-- container END
@@ -268,13 +493,19 @@
 	</div>
 <!-- footer END
 ============================================= -->
+	<div class="qr_code_focus">
+		<img src="wechatQR.jpg">
+		<p>微信扫一扫<br>关注该公众号</p>
+	</div> 
+
+<script src="https://dilixi.gitee.io/resource/js/jquery.min.js"> </script>
 <script type="text/javascript">
 
 	$(window).scroll(function()
 	{
 		if($(document).scrollTop()!=0)
 		{
-			var $tabble =$(".tabber-item.active");
+			var $tabble =$(".page-item.active");
 			var getId = $tabble.attr("id");
 
 			//console.log("getId = "+getId);
@@ -336,6 +567,20 @@
 		var mainPage = $($(".rotater.active").find('div').attr("pageId"));
 		mainPage.show();
 		mainPage.addClass("active");
+
+		var aImgs = document.getElementsByTagName('img')
+
+		for(var i=0; i<aImgs.length;i++)
+		{
+			if(aImgs[i].src)
+		    aImgs[i].src = "https://dilixi.gitee.io/resource/images/"+aImgs[i].getAttribute('src');
+		}
+
+		var videoPoster = $(".rslides").find('video').attr('poster');
+
+		videoPoster ="https://dilixi.gitee.io/resource/images/"+ videoPoster;
+
+		$(".rslides").find('video').attr('poster',videoPoster);
 	}
 
 	function sortDown(x,y)
@@ -404,9 +649,9 @@
 			//加入保nav-box位置
 			$(this).addClass("active").siblings('.rotater.active').removeClass("active");
 
-			$(jQuery(this).find('div').attr("pageId")).show().siblings('.tabber-item').hide();
+			$(jQuery(this).find('div').attr("pageId")).show().siblings('.page-item').hide();
 
-			$(jQuery(this).find('div').attr("pageId")).addClass('active').siblings('.tabber-item.active').removeClass("active");
+			$(jQuery(this).find('div').attr("pageId")).addClass('active').siblings('.page-item.active').removeClass("active");
 
 			var getId = ($(jQuery(this).find('div').attr("pageId")).attr("id"));
 
@@ -414,7 +659,9 @@
 
 			$(document).scrollTop(setScroll); 
 
-			wow.init();
+			var wow = new WOW();
+
+	        wow.init();
 		});
 
 		var $navObjs = $(".nav-box");
@@ -567,9 +814,21 @@
 		        	$(".nav-box").toggleClass("active");
 		        }
 		    };  
-		}                      
+		}  
+    
+		$("#slider4").responsiveSlides
+		({
+            auto: false,
+		    manualControls: '#slider-pager'
+		});      
+
+		$(".viewMore").click(function(event)
+		{		
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
 	});
 </script>
+<script src="https://dilixi.gitee.io/resource/js/responsiveslides.min.js"></script>
 <script type="text/javascript" src="https://dilixi.gitee.io/resource/js/wow.js"></script>
 <script type="text/javascript" src="https://dilixi.gitee.io/resource/js/move-top.js"></script>
 <script type="text/javascript" src="https://dilixi.gitee.io/resource/js/easing.js"></script>
