@@ -30,7 +30,7 @@ var result = false;
   
   function exit()
   {
-      window.open("https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA4MjEyOTk5NA==&scene=124#wechat_redirect",'_self');
+      window.open("https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA4MjEyOTk5NA==&scene=124#wechat_redirect#js_btn_view_profile",'_self');
       //window.location.href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA4MjEyOTk5NA==&scene=124#wechat_redirect";
       //window.close();
   }
@@ -52,7 +52,11 @@ var result = false;
 
               if(resource)
               {
-                 window.open(resource); 
+                 //window.close();
+                 //window.open(resource); 
+
+                 window.location.href=resource;
+                 window.close();
 
                  result = true;
               }
