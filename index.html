@@ -1,29 +1,33 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<title>地粒希，农家自榨菜籽油</title>
 	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 <style>
 body{
 margin:0; 
 padding:0; 
-overflow-y:hidden;
+overflow-y:auto;
+height: 100%;
+width:100%;
+}
+#iframe{
+width:100%;
 height:100%;
-width: 100%;
 }
 </style>
 <script src="jquery.min.js"></script>
 <script type="text/javascript"> 
 window.onerror=function(){return true;} 
 $(function(){ 
-headerH = 0;
 var h=$(window).height();
-$("#iframe").height((h-headerH)+"px"); 
+var w =$(window).width();
 });
 </script>
 </head>
 <body>
-<iframe id="iframe" frameborder="0" src="https://dilixi.gitee.io" style="width:100%;"></iframe>
+<iframe id="iframe" frameborder='0' align='center' src="https://dilixi.gitee.io" allowfullscreen="true"></iframe>
 </body>
 </html>

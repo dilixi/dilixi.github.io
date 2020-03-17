@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>地粒希菜籽油</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+#invalid 
+{
+    display: none;
+    margin:0 auto;
+    text-align: center;
+}
+</style>
+
+</head>
+<body>
+
+<div id = "invalid" onclick="exit()"><img src="https://dilixi.gitee.io/resource/images/invalid.png"> </div>
+
+<script type="text/javascript"> 
+var VALID_TIME = 1000*60*3;
+var result = false;
+
+  function getParameter(keyWord)
+  {
+      var reg = new RegExp("(^|&)" + keyWord + "=([^&]*)(&|$)");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return unescape(r[2]); return null;
+  }
+  
+  function exit()
+  {
+      window.open("https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA4MjEyOTk5NA==&scene=124#wechat_redirect",'_self');
+      //window.location.href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA4MjEyOTk5NA==&scene=124#wechat_redirect";
+      //window.close();
+  }
+    var check = getParameter('check');
+    
+    if(check) 
+    {
+        var checkValue = Date.parse(check); 
+
+        if(checkValue)
+        {
+            //console.log('checkValue:'+checkValue);
+
+            if(Math.abs(new Date() - checkValue) < VALID_TIME)
+            {
+              var resource = getParameter('resource');
+
+             // console.log('resource:'+resource);
+
+              if(resource)
+              {
+                 window.open(resource); 
+
+                 result = true;
+              }
+            }
+        }
+  //let b = Date.parse("2020-03-17 18:12:20");
+    }
+    
+    if(result == false)
+    {
+        //window.open("https://www.baidu.com");//
+        document.getElementById('invalid').style.display="block";
+    }
+    
+</script>
+</body>
+</html>
