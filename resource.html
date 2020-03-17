@@ -3,39 +3,80 @@
 <head>
 	<title>地粒希菜籽油</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=0.1">
 <style type="text/css">
-#invalid 
+
+#warp 
 {
-    margin:0 auto;
+    height:2048px;
     text-align: center;
-    height:1024px;
+    display: none;
 }
 
-#iframe 
+#iframeBox 
 {
     display: none;
-    height:100%;
+    text-align: center;
+    height:2048px;
 }
-/*---responsive media   quaries---*/
-@media only screen and (max-width:360px)
+
+#invalid 
 {
-  #invalid 
-  {
-      height:640px;
-  }
+    display: none;
+    text-align: center;
+}
+
+#title
+{
+    display:none;
+    font-size: 64px;
+    font-weight: bolder;
+    color: #ff6666;
 }
 
 </style>
 
 </head>
 <body onclick="exit()">
-
-<div id = "invalid" ><iframe id="iframe"  name="adlistpage" width="100%" frameborder='0'src="https://dilixi.gitee.io/resource/images/invalid.png" allowfullscreen="true"></iframe> </div>
-
+  <div id = 'warp'>
+    <div id="invalid">
+    <img src="https://dilixi.gitee.io/resource/images/invalid.png">
+    </div>
+    <div id="iframeBox">
+    <span id = "title">手指按住二维码不放,识别二维码</span>
+    <iframe  id="iframe" width= "100%" height="100%" frameborder='0'src="https://dilixi.gitee.io/resource/images/invalid.png" allowfullscreen="true"></iframe>
+    </div>
+</div>
 <script type="text/javascript"> 
 var VALID_TIME = 1000*60*3;
 var result = false; 
+var OFFICIAL_ADDRESS = 'https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA4MjEyOTk5NA==&scene=124#wechat_redirect';
+var is_mobi = navigator.userAgent.toLowerCase().match(/(ipod|ipad|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince)/i) != null;
+ 
+   var isWeixin = false;
+
+    if(is_mobi) 
+    { 
+      var ua = navigator.userAgent.toLowerCase();  
+
+      if(ua.match(/MicroMessenger/i)=="micromessenger") 
+      {  
+          isWeixin = true;
+      } 
+    }
+
+  if (false == isWeixin)
+  {
+      //window.location.href = OFFICIAL_ADDRESS;
+      window.open(OFFICIAL_ADDRESS,'_self');
+  }
+  else
+  {
+      //document.getElementById('invalid').style.display="block";
+      document.getElementById('warp').style.display="block";
+  }
+ 
+
   function getParameter(keyWord)
   {
       var reg = new RegExp("(^|&)" + keyWord + "=([^&]*)(&|$)");
@@ -46,9 +87,7 @@ var result = false;
   function exit()
   {
       console.log('exit');
-      window.open("https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA4MjEyOTk5NA==&scene=124#wechat_redirect#js_btn_view_profile",'_self');
-      //window.location.href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA4MjEyOTk5NA==&scene=124#wechat_redirect";
-      //window.close();
+      window.location.href = OFFICIAL_ADDRESS;//OFFICIAL_ADDRESS
   }
  
     var check = getParameter('check');
@@ -59,39 +98,28 @@ var result = false;
 
         if(checkValue)
         {
-            //console.log('checkValue:'+checkValue);
-
             if(Math.abs(new Date() - checkValue) < VALID_TIME)
             {
               var resource = getParameter('resource');
-
-             // console.log('resource:'+resource);
-
               if(resource)
               {
-                 //window.close();
-                 //window.open(resource); 
-                 document.getElementById('iframe').style.display="block";
-                 console.log('src:'+document.getElementById('iframe').src);
-                 document.getElementById('iframe').src=resource;
-                 console.log('after src:'+document.getElementById('iframe').src);
-                 //window.location.href=resource;
-                 //window.close();
+                 document.getElementById('invalid').style.display="none";
+                 document.getElementById('iframeBox').style.display="block"; 
+                 document.getElementById('title').style.display="block";
+                 document.getElementById('iframe').src=resource; 
 
                  result = true;
               }
             }
         }
-  //let b = Date.parse("2020-03-17 18:12:20");
     }
     
     if(result == false)
     {
-        //window.open("https://www.baidu.com");//
-      // document.getElementById('invalid').style.display="block";
-       // 
+       document.getElementById('invalid').style.display="block";
+       document.getElementById('title').style.display="none";
     }
-    
+
 </script>
 </body>
 </html>
