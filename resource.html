@@ -65,7 +65,12 @@ var is_mobi = navigator.userAgent.toLowerCase().match(/(ipod|ipad|iphone|android
  
    var isWeixin = false;
 
-    if(is_mobi) 
+    function isAppleMobile() 
+    {
+        return (navigator.platform.indexOf('iPad') != -1);
+    };
+
+    if((is_mobi)||isAppleMobile()) 
     { 
       var ua = navigator.userAgent.toLowerCase();  
 
@@ -84,8 +89,7 @@ var is_mobi = navigator.userAgent.toLowerCase().match(/(ipod|ipad|iphone|android
   {
       //document.getElementById('invalid').style.display="block";
       document.getElementById('warp').style.display="block";
-  }
- 
+  } 
 
   function getParameter(keyWord)
   {
