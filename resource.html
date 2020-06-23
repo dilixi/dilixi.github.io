@@ -63,14 +63,14 @@ var result = false;
 var OFFICIAL_ADDRESS = 'https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA4MjEyOTk5NA==&scene=124#wechat_redirect';
 var is_mobi = navigator.userAgent.toLowerCase().match(/(ipod|ipad|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince)/i) != null;
  
-   var isWeixin = false;
+   /*var isWeixin = false;
 
     function isAppleMobile() 
     {
         return (navigator.platform.indexOf('iPad') != -1);
     };
 
-    if((is_mobi)||isAppleMobile()) 
+    if(is_mobi) 
     { 
       var ua = navigator.userAgent.toLowerCase();  
 
@@ -80,6 +80,11 @@ var is_mobi = navigator.userAgent.toLowerCase().match(/(ipod|ipad|iphone|android
       } 
     }
 
+    if(isAppleMobile()) 
+    {
+        isWeixin = true;
+    }
+  
   if (false == isWeixin)
   {
       //window.location.href = OFFICIAL_ADDRESS;
@@ -90,6 +95,8 @@ var is_mobi = navigator.userAgent.toLowerCase().match(/(ipod|ipad|iphone|android
       //document.getElementById('invalid').style.display="block";
       document.getElementById('warp').style.display="block";
   } 
+*/
+  document.getElementById('warp').style.display="block";
 
   function getParameter(keyWord)
   {
@@ -115,6 +122,7 @@ var is_mobi = navigator.userAgent.toLowerCase().match(/(ipod|ipad|iphone|android
             if(Math.abs(new Date() - checkValue) < VALID_TIME)
             {
               var resource = getParameter('resource');
+              
               if(resource)
               {
                  document.getElementById('invalid').style.display="none";
